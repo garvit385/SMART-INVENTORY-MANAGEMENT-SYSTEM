@@ -1,0 +1,28 @@
+name: Java desktop build and tests
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+      - name: Install virtual display
+        run: sudo apt-get update && sudo apt-get install -y xvfb xauth
+      - name: Compile, test Swing and package executable
+        run: xvfb-run -a -s '-screen 0 1600x1100x24' mvn -B -Djava.awt.headless=false clean package
+      - uses: actions/upload-artifact@v4
+        with:
+          name: SmartStock-JAR-and-test-evidence
+          path: |
+            target/SmartStock.jar
+            target/surefire-reports/
+            target/gui-screenshots/
