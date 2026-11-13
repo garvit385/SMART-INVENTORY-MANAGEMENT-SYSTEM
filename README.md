@@ -299,7 +299,7 @@ This delivery deliberately prioritizes a working one-day academic submission:
 
 Recommended next steps are barcode support, tax-aware invoices, pagination/background loading, role-based access, audited returns and a platform-specific `jpackage` installer.
 
-## Author / academic submission
+## Author 
 GARVIT WADHAWAN |
 ANSH SINGH |
 MENAL RANA|
