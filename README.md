@@ -285,29 +285,6 @@ The included GitHub Actions workflow builds on Java 17 and uploads the JAR, test
 - **No printer:** save the invoice as text, or configure an OS PDF printer. Physical printer output was not tested in the sandbox.
 - **Changed demo password:** use your replacement password. To reset only a disposable demo database, close SmartStock and move that database aside; never delete a real database to recover an account.
 
-## GitHub submission
-
-Suggested repository name: **smart-inventory-management-system**.
-
-The Java project is self-contained. In the original development workspace it lives under `/home/user/webapp/smart-inventory-management-system/` to preserve unrelated starter files. For submission, use the contents of this folder, or the supplied source ZIP, as your repository root. Do not submit the unrelated web template.
-
-After creating an empty repository in your own GitHub account, run these commands from a **standalone extracted copy** of this Java project:
-
-```sh
-git init
-git add .
-git commit -m "Initial release: SmartStock Java inventory management system"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/smart-inventory-management-system.git
-git push -u origin main
-```
-
-Replace `YOUR_USERNAME` with your account name and use your normal GitHub authentication. Do not put a personal access token inside source files, commands saved in the repository, or remote URLs. If a remote already exists, inspect `git remote -v` and use `git remote set-url origin ...` instead of adding it twice.
-
-The `.gitignore` excludes `target/`, class files, IDE metadata, local databases, logs and `.env`. The executable can be attached separately to a **GitHub Release** instead of committing binaries.
-
-**GitHub publication status:** prepared locally; no GitHub repository creation or push is claimed. Local source commits are maintained in the development workspace.
-
 ## Known limitations and future improvements
 
 This delivery deliberately prioritizes a working one-day academic submission:
@@ -323,5 +300,7 @@ This delivery deliberately prioritizes a working one-day academic submission:
 Recommended next steps are barcode support, tax-aware invoices, pagination/background loading, role-based access, audited returns and a platform-specific `jpackage` installer.
 
 ## Author / academic submission
-
-The **submitting student and GitHub repository owner** should add their full name, roll number, college and supervisor before submission. No personal identity has been invented in this project. Understand and adapt the code, disclose assistance according to your institution's policy, and use [VIVA_PREPARATION.md](VIVA_PREPARATION.md) to prepare for the demonstration.
+GARVIT WADHAWAN 
+ANSH SINGH 
+MENAL RANA
+DEEPANSHU RAJ 
